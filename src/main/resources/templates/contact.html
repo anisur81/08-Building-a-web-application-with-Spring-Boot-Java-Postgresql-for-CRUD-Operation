@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" th:href="@{/css/style_common_header.css}">
+	<link rel="stylesheet" th:href="@{/css/style_base.css}">
+	<link rel="stylesheet" th:href="@{/css/style_cert.css}">
+	<link rel="stylesheet" th:href="@{/css/style_contact.css}">
+<title>Md. Anisur Rahman's Portfolio Website</title>
+
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<section class="contact-banner section_gap">
+<div class="banner-content">
+<h1>Contact with Me</h1>
+
+<p>
+I am a DevSecOps Engineer specializing in CI/CD automation, cloud infrastructure,
+        container orchestration, and secure system design. I am open to job opportunities,
+        freelance work, and collaboration.
+</p>
+
+</div>
+</section>
+
+  
+    <div class="card">
+        <div class="label">Email</div>
+        <div class="value">anisur81@gmail.com</div>
+    </div>
+ 
+
+
+    <div class="card">
+        <div class="label">Phone</div>
+        <div class="value">+880 1971334239</div>
+    </div>
+
+ 
+    <div class="card">
+        <div class="label">Location</div>
+        <div class="value">Dhaka, Bangladesh</div>
+    </div>
+ 
+
+ 
+    <div class="card">
+        <div class="label">LinkedIn</div>
+        <div class="value">
+            <a href="https://www.linkedin.com/in/anisur-rahman-cisa"
+               target="_blank"
+               rel="noopener noreferrer">
+                www.linkedin.com/in/anisur-rahman-cisa
+            </a>
+        </div>
+    </div>
+ 
+
+ 
+    <div class="card">
+        <div class="label">GitHub</div>
+        <div class="value">
+            <a href="https://github.com/anisur81"
+               target="_blank"
+               rel="noopener noreferrer">
+                github.com/anisur81
+            </a>
+        </div>
+    </div>
+ 
+
+ 
+    <div class="card">
+        <div class="label">Availability</div>
+        <div class="value">Open to Work (Full-time / Freelance / Remote)</div>
+    </div>
+ 
+ 
+    <div class="card">
+        <div class="label">Note</div>
+        <div class="value">
+            I usually respond within 24 hours for professional inquiries.
+        </div>
+    </div>
+ 
+<h1>Contact Request List</h1>
+
+<a th:href="@{/contact/add}">Add Contact Request</a>
+
+<br><br>
+
+<table border="1">
+
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Organization Name</th>
+        <th>Phone No</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Comment</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+
+   <tbody>
+
+<tr th:each="contact : ${contacts}">
+
+    <td th:text="${contact.id}"></td>
+    <td th:text="${contact.orgTitle}"></td>
+    <td th:text="${contact.phoneNo}"></td>
+    <td th:text="${contact.email}"></td>
+    <td th:text="${contact.address}"></td>
+    <td th:text="${contact.comment}"></td>
+
+    <td>
+
+        <a th:href="@{/contact/edit/{id}(id=${contact.id})}">
+            Edit
+        </a>
+
+        |
+
+        <a th:href="@{/contact/delete/{id}(id=${contact.id})}">
+            Delete
+        </a>
+
+    </td>
+
+</tr>
+
+</tbody>
+
+</table>
+ 
+		<footer>
+    © 2026 Md. Anisur Rahman's DevSecOps Portfolio Website
+</footer>
+</body>
+</html>

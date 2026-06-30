@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Request Form</title>
+
+<link rel="stylesheet" th:href="@{/css/style_base.css}">
+</head>
+
+<body>
+
+<h2 th:text="${contactReq.id == null} ? 'Add Contact Request' : 'Edit Contact Request'">
+    Contact Request
+</h2>
+
+<form th:action="@{/contact/save}" th:object="${contactReq}" method="post">
+
+    <input type="hidden" th:field="*{id}">
+
+    <input type="text" th:field="*{orgTitle}">
+    <input type="text" th:field="*{phoneNo}">
+    <input type="email" th:field="*{email}">
+    <textarea th:field="*{address}"></textarea>
+    <textarea th:field="*{comment}"></textarea>
+
+    <button type="submit">Save</button>
+
+</form>
+
+</body>
+</html>

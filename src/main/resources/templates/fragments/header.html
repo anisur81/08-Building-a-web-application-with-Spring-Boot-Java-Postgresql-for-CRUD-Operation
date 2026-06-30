@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<header class="site-header" th:fragment="header">
+    <div class="header-container">
+
+        <div class="header-left">
+
+            <h1 class="name">Md. Anisur Rahman</h1>
+
+            <p class="title">
+                DevSecOps Engineer | Cloud Engineer | Security | Automation
+            </p>
+
+            <a th:href="@{/files/anisur_rahman_cv.pdf}"
+               class="btn"
+               target="_blank">
+                Download My CV
+            </a>
+
+            <nav class="navbar">
+                <a th:href="@{/}">Overview</a>
+                <a th:href="@{/certificates}">Certificates</a>
+                <a th:href="@{/skills}">Skills</a>
+                <a th:href="@{/projects}">Projects</a>
+                <a th:href="@{/contact}">Contact</a>
+                <a th:href="@{/about}">About Me</a>
+            </nav>
+
+        </div>
+
+        <div class="header-right">
+            <img th:src="@{/images/photo.jpeg}"
+                 alt="Profile Photo"
+                 class="rounded-img">
+        </div>
+
+    </div>
+</header>
+
+</body>
+</html>
