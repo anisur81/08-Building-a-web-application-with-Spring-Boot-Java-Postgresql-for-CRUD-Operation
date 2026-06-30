@@ -264,7 +264,8 @@ message TEXT
                   ▼
             PostgreSQL Database
 ```
-
+# For running the application
+$ mvn spring-boot:run
 ---
 
  
