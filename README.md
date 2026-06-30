@@ -24,47 +24,61 @@ This project is a Spring Boot MVC web application that performs CRUD (Create, Re
 
 ```
 portfolio/
-│
 ├── pom.xml
 ├── src/
-│
-├── main/
-│   ├── java/
-│   │
-│   └── com/
-│       └── anis/
-│           └── portfolio/
-│
-│               ├── PortfolioApplication.java
-│
-│               ├── config/
-│               │      SecurityConfig.java
-│               │
-│               ├── controller/
-│               │      HomeController.java
-│               │
-│               ├── entity/
-│               │      ContactReq.java
-│               │
-│               ├── repository/
-│               │      ContactReqRepository.java
-│               │
-│               └── service/
-│                      ContactReqService.java
-│
-│                      impl/
-│
-└── resources/
-       application.properties
-
-       static/
-
-       templates/
-
-            add.html
-            edit.html
-            contact.html
-            home.html
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── anis/
+│   │   │           └── portfolio/
+│   │   │               ├── PortfolioApplication.java
+│   │   │               ├── config/
+│   │   │               │   └── SecurityConfig.java
+│   │   │               ├── controller/
+│   │   │               │   └── HomeController.java
+│   │   │               ├── entity/
+│   │   │               │   └── ContactReq.java
+│   │   │               ├── repository/
+│   │   │               │   └── ContactReqRepository.java
+│   │   │               └── service/
+│   │   │                   ├── ContactReqService.java
+│   │   │                   └── impl/
+│   │   │                       └── ContactReqServiceImpl.java
+│   │   └── resources/
+│   │       ├── application.properties
+│   │       ├── static/
+│   │       │   ├── css/
+│   │       │   │   ├── style_about.css
+│   │       │   │   ├── style_cert.css
+│   │       │   │   ├── style_common_header.css
+│   │       │   │   ├── style_contact.css
+│   │       │   │   ├── style_overview.css
+│   │       │   │   ├── style_projects.css
+│   │       │   │   ├── style_skills.css
+│   │       │   │   └── style_table.css
+│   │       │   ├── files/
+│   │       │   │   └── anisur_rahman_cv.pdf
+│   │       │   └── images/
+│   │       │       └── photo.jpeg
+│   │       └── templates/
+│   │           ├── fragments/
+│   │           │   └── header.html
+│   │           ├── about.html
+│   │           ├── add.html
+│   │           ├── certificates.html
+│   │           ├── contact-form.html
+│   │           ├── contact.html
+│   │           ├── edit.html
+│   │           ├── home.html
+│   │           ├── index.html
+│   │           ├── projects.html
+│   │           └── skills.html
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── anis/
+│                   └── portfolio/
+└── target/
 ```
 
 ---
