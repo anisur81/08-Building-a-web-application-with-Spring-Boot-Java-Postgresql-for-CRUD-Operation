@@ -23,6 +23,7 @@ This project is a Spring Boot MVC web application that performs CRUD (Create, Re
 ## Existing Project Structure
 
 ```
+```text
 portfolio/
 ├── pom.xml
 ├── src/
@@ -48,21 +49,10 @@ portfolio/
 │   │       ├── application.properties
 │   │       ├── static/
 │   │       │   ├── css/
-│   │       │   │   ├── style_about.css
-│   │       │   │   ├── style_cert.css
-│   │       │   │   ├── style_common_header.css
-│   │       │   │   ├── style_contact.css
-│   │       │   │   ├── style_overview.css
-│   │       │   │   ├── style_projects.css
-│   │       │   │   ├── style_skills.css
-│   │       │   │   └── style_table.css
 │   │       │   ├── files/
-│   │       │   │   └── anisur_rahman_cv.pdf
 │   │       │   └── images/
-│   │       │       └── photo.jpeg
 │   │       └── templates/
 │   │           ├── fragments/
-│   │           │   └── header.html
 │   │           ├── about.html
 │   │           ├── add.html
 │   │           ├── certificates.html
@@ -79,6 +69,7 @@ portfolio/
 │               └── anis/
 │                   └── portfolio/
 └── target/
+```
 ```
 
 ---
